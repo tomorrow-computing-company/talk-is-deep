@@ -1,3 +1,5 @@
+import { getRandomValues } from "../logic/get_values";
+
 export const dialectical_thinking_pair_1 = (conversationSoFar: string) => `
 
 # NOW: GENERATE A DIALECTICAL QUESTION 
@@ -14,11 +16,7 @@ export const dialectical_thinking_pair_1 = (conversationSoFar: string) => `
 - You can use these examples as inspiration for your dialectical question.
 
 <example_dialectical_questions>
-${approaches
-  .sort(() => 0.5 - Math.random())
-  .slice(0, 3)
-  .map((a, i) => `${i + 1}. ${a}`)
-  .join("\n")}
+${getRandomValues(approaches, 3).join("\n")}
 </example_dialectical_questions>
 
 - These are just examples from different topic areas that are irrelevant to the current topic area. Consider their format and depth, but be sure to generate your own unique dialectical question given the conversation so far.

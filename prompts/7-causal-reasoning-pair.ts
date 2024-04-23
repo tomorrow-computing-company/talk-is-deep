@@ -1,3 +1,5 @@
+import { getRandomValues } from "../logic/get_values";
+
 export const causal_reasoning_pair_1 = (conversationSoFar: string) => `
 
 # NOW: GENERATE A QUESTION USING CAUSAL REASONING
@@ -15,11 +17,7 @@ export const causal_reasoning_pair_1 = (conversationSoFar: string) => `
 - You can use these examples as inspiration for your causal reasoning question.
 
 <example_causal_questions>
-${approaches
-  .sort(() => 0.5 - Math.random())
-  .slice(0, 3)
-  .map((a, i) => `${i + 1}. ${a}`)
-  .join("\n")}
+${getRandomValues(approaches, 3).join("\n")}
 </example_causal_questions>
 
 - These are just examples from different topic areas that are irrelevant to the current topic area. Consider their format and reasoning, but be sure to generate your own unique causal question given the conversation so far.

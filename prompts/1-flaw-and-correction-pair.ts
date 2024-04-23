@@ -1,3 +1,5 @@
+import { getRandomValues } from "../logic/get_values";
+
 export const flawed_pair_1 = (
   conversationSoFar: string
 ) => `# NOW: GENERATE A PLAUSIBLE BUT FLAWED FOLLOWUP QUESTION
@@ -8,11 +10,7 @@ export const flawed_pair_1 = (
   - Like this:
   
   <example_reference_templates>
-  ${approaches
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 5)
-    .map((a, i) => `${i + 1}. ${a}`)
-    .join("\n")}
+  ${getRandomValues(approaches, 3).join("\n")}
   </example_reference_templates>
   
   - The student should be attempting to understand the conversation so far, but get something wrong.

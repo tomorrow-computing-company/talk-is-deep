@@ -1,3 +1,5 @@
+import { getRandomValues } from "../logic/get_values";
+
 export const probabalistic_thinking_pair_1 = (conversationSoFar: string) => `
 
 # NOW: GENERATE A QUESTION USING PROBABILISTIC THINKING
@@ -14,11 +16,7 @@ export const probabalistic_thinking_pair_1 = (conversationSoFar: string) => `
 - You can use these examples as inspiration for your probabilistic question.
 
 <example_probabilistic_questions>
-${approaches
-  .sort(() => 0.5 - Math.random())
-  .slice(0, 3)
-  .map((a, i) => `${i + 1}. ${a}`)
-  .join("\n")}
+${getRandomValues(approaches, 3).join("\n")}
 </example_probabilistic_questions>
 
 - These are just examples from different topic areas that are irrelevant to the current topic area. Consider their format and reasoning, but be sure to generate your own unique probabilistic question given the conversation so far.
@@ -30,6 +28,7 @@ ${approaches
     ${conversationSoFar}
 </conversation>
 
+# Your Response
 - Think quietly about the last response from the professor and the overall conversation.
 - You are now to generate a question that uses probabilistic thinking to reason about uncertain future outcomes related to the topic at hand.
 - REMEMBER: The conversation must progress forward, so your question must illicit a thoughtful response from the professor. The goal is to introduce a future-oriented perspective and grapple with the inherent uncertainty in how the field will develop.

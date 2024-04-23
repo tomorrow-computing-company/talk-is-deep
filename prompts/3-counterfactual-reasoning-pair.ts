@@ -1,3 +1,5 @@
+import { getRandomValues } from "../logic/get_values";
+
 export const counterfactual_reasoning_pair_1 = (conversationSoFar: string) => `
 
 # NOW: GENERATE A FOLLOWUP QUESTION THAT USES COUNTERFACTUAL REASONING
@@ -13,11 +15,7 @@ export const counterfactual_reasoning_pair_1 = (conversationSoFar: string) => `
 - You can use these examples as inspiration for your followup question.
 
 <example_counterfactual_questions>
-${approaches
-  .sort(() => 0.5 - Math.random())
-  .slice(0, 5)
-  .map((a, i) => `${i + 1}. ${a}`)
-  .join("\n")}
+${getRandomValues(approaches, 3).join("\n")}
 </example_counterfactual_questions>
 
 - These are just examples. Consider their format and depth, but be sure to generate your own unique followup question given the conversation so far.
