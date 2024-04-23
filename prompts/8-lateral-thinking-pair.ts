@@ -1,3 +1,5 @@
+import { getRandomValues } from "../logic/get_values";
+
 export const lateral_thinking_pair_1 = (conversationSoFar: string) => `
 
 # NOW: GENERATE A QUESTION USING LATERAL THINKING
