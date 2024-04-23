@@ -13,7 +13,7 @@ export class vllm {
     } = {}
   ): Promise<any> {
     const data = {
-      model: config.model || "hf-models/NousResearch-Hermes-2-Pro-Mistral-7B",
+      model: config.model || "hf-models/Meta-Llama-3-8B-Instruct",
       messages: [...messages],
       max_tokens: config.max_tokens || 3072,
       temperature: config.temperature || 0.5,

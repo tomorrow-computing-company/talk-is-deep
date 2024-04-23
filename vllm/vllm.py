@@ -11,7 +11,9 @@ def start_server():
         "/usr/bin/python3", "-m", "vllm.entrypoints.openai.api_server",
         "--model", "hf-models/Meta-Llama-3-8B-Instruct",
         "--max-model-len", "8192",
-        "--enforce-eager"
+        "--kv-cache-dtype", "fp8_e5m2",
+        '--tensor-parallel-size', '2',
+        "--enforce-eager",
     ]
     return subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, preexec_fn=os.setsid)
 
