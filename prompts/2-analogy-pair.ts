@@ -3,7 +3,6 @@ export const analogy_pair_1 = (conversationSoFar: string) => `
 # NOW: GENERATE A FOLLOWUP QUESTION THAT USES AN ANALOGICAL REASONING
 
 - Now generate a followup question to the instructor's last response that utilizes analogical reasoning to draw connections between an unrelated topic and the current topic.
-- The question should be inspired by the conversation so far, but it should contain an error that will be corrected later.
 - It should reference an earlier message in the conversation using a direct quote / reference.
 
 ## Inspirational Examples
