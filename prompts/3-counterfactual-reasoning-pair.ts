@@ -25,8 +25,12 @@ ${approaches
 ## CONVERSATION SO FAR:
 
 - Here is the conversation so far:
-${conversationSoFar}
+<conversation>  
+    ${conversationSoFar}
+</conversation>
 
+# Your Response
+- Think quietly about the last response from the professor and the overall conversation.
 - You are now to generate a followup question that uses counterfactual reasoning to explore how conclusions about the current conversation topic may have changed under alternative conditions.
 - REMEMBER: The conversation must progress forward, so your followup question must illicit a varied response from the teacher. The goal is to increase the depth of the conversation, not simply repeat points that have already been made.
 - YOU MUST ASK A QUESTION. YOUR QUESTION MUST BE ON THE TOPIC OF THE CONVERSATION SO FAR. YOU MUST USE COUNTERFACTUAL REASONING TO EXPLORE HOW CONCLUSIONS MAY HAVE CHANGED UNDER ALTERNATIVE CONDITIONS.

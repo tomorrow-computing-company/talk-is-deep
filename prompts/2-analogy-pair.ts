@@ -24,8 +24,12 @@ ${approaches
 ## CONVERSATION SO FAR:
 
 - Here is the conversation so far:
-${conversationSoFar}
+<conversation>  
+    ${conversationSoFar}
+</conversation>
 
+# Your Response
+- Think quietly about the last response from the professor and the overall conversation.
 - You are now to generate a followup question that uses analogical reasoning to draw connections between an unrelated topic and the topic of the conversation so far.
 - REMEMBER: The conversation must progress forward, so your followup question must illicit a varied response from the teacher. The goal is to increase the depth of the conversation, not simply repeat points that have already been made.
 - YOU MUST ASK A QUESTION. YOUR QUESTION MUST BE ON THE TOPIC OF THE CONVERSATION SO FAR. YOU MUST USE ANALOGICAL REASONING TO DRAW CONNECTIONS BETWEEN AN UNRELATED TOPIC AND THE CURRENT TOPIC.

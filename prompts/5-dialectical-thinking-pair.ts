@@ -26,8 +26,12 @@ ${approaches
 ## CONVERSATION SO FAR:
 
 - Here is the conversation so far:  
-${conversationSoFar}
+<conversation>  
+    ${conversationSoFar}
+</conversation>
 
+# Your Response
+- Think quietly about the last response from the professor and the overall conversation.
 - You are now to generate a dialectical question that examines the topic from multiple, potentially opposing perspectives.
 - REMEMBER: The conversation must progress forward, so your question should explore aspects of the topic that haven't been discussed yet. The goal is to increase the breadth of the conversation by considering different viewpoints.
 - YOU MUST ASK A QUESTION. YOUR QUESTION MUST BE ON THE TOPIC OF THE CONVERSATION SO FAR. YOU MUST ENGAGE IN DIALECTICAL THINKING.
