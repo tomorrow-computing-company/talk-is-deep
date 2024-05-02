@@ -1,4 +1,9 @@
-# Logs
+# big files
+*.zip
+*.jsonl
+
+
+# Node business boilerplate
 logs
 *.log
 npm-debug.log*
