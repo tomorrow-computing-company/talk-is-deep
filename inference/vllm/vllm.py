@@ -6,14 +6,17 @@ import sys
 import select
 import os
 
-def start_server():
+def start_server(model_path=None):
+    if model_path is None:
+        model_path = "hf-models/Meta-Llama-3-8B-Instruct"
     command = [
         "/usr/bin/python3", "-m", "vllm.entrypoints.openai.api_server",
-        "--model", "hf-models/Meta-Llama-3-8B-Instruct",
+        "--model", model_path,
         "--max-model-len", "8192",
         "--kv-cache-dtype", "fp8_e5m2",
         '--tensor-parallel-size', '2',
         "--enforce-eager",
+        "--port", "5000"
     ]
     return subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, preexec_fn=os.setsid)
 
@@ -44,13 +47,19 @@ def terminate_process(process):
     if process.poll() is None:
         os.killpg(os.getpgid(process.pid), signal.SIGKILL)
 
-def main():
+def main(model_path=None):
     while True:
-        process = start_server()
+        process = start_server(model_path)
         restart = read_output(process)
         if not restart:
             break
         time.sleep(5)  # Wait for 5 seconds before restarting
 
 if __name__ == "__main__":
-    main()
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Run the VLLM server.")
+    parser.add_argument("--model-path", type=str, default=None, help="Path to the model directory.")
+    args = parser.parse_args()
+
+    main(args.model_path)

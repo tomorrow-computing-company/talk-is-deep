@@ -1,2 +1,4 @@
 FlagEmbedding
 qdrant-client
+sentence_transformers
+nltk

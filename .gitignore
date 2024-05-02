@@ -2,6 +2,7 @@
 *.zip
 *.jsonl
 data/arxiv-metadata-oai-snapshot.json
+data/data/
 
 # Node business boilerplate
 logs
