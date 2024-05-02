@@ -6,6 +6,9 @@
   "repository": "git@github.com:tomorrow-computing-company/talk-is-deep.git",
   "author": "Darren Angle <darrendarrenangle@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "push": "git add . && npx git-cz && git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)"
+  },
   "dependencies": {
     "axios": "^1.6.8"
   },
