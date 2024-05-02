@@ -13,9 +13,14 @@ pip install kaggle
 # download data
 kaggle datasets download -d Cornell-University/arxiv
 
-# unzip data 
+# unzip data
+sudo apt-get install zip unzip
 unzip arxiv.zip
 
 # load data into qdrant
+pip install -r requirements.txt
 python3 prepare.py
+
+# remove zip
+rm arxiv.zip
 

@@ -1,7 +1,7 @@
 # big files
 *.zip
 *.jsonl
-
+data/arxiv-metadata-oai-snapshot.json
 
 # Node business boilerplate
 logs
