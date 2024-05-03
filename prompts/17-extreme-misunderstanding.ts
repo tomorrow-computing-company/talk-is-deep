@@ -1,4 +1,4 @@
-import { getRandomValues } from "../logic/get_values";
+import { getRandomValues } from "../logic/get-values";
 
 export const extreme_misunderstanding_pair_1 = (conversationSoFar: string) => `
 
