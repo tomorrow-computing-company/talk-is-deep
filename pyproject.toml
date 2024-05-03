@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "talk-is-deep"
+version = "0.1.0"
+description = "generate 1 million scientific conversations and train llms on them"
+authors = ["Darren Angle <darrendarrenangle@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.9"
+FlagEmbedding = "1.2.9"
+qdrant-client = "1.8.2"
+sentence_transformers = "2.6.1"
+nltk = "3.8.1"
+flask = "3.0.3"
+vllm = "0.4.1"
+kaggle = "^1.6.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

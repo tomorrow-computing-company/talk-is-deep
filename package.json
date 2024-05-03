@@ -10,9 +10,10 @@
     "push": "git add . && npx git-cz && git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)",
     "load-data": "cd data && ./load-from-scratch.sh",
     "run-qdrant": "cd data && ./run-qdrant.sh",
-    "run-inference": "pip install -r inference/requirements.txt && python3 inference/vllm/vllm.py --model-path ../hf-models/Meta-Llama-3-8B-Instruct",
-    "run-data-api": "pip install -r data/requirements.txt && python data/api/server.py",
-    "start": "concurrently \"yarn run run-data-api\" \"yarn run run-qdrant\" \"yarn run run-inference\""
+    "run-inference": "poetry run python inference/vllm/vllm.py --model-path ../hf-models/Meta-Llama-3-8B-Instruct",
+    "run-data-api": "poetry run python data/api/server.py",
+    "start": "concurrently \"yarn run run-data-api\" \"yarn run run-qdrant\" \"yarn run run-inference\"",
+    "postinstall": "poetry install"
   },
   "dependencies": {
     "axios": "^1.6.8",

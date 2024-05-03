@@ -14,7 +14,7 @@ def start_server(model_path=None):
         "--model", model_path,
         "--max-model-len", "8192",
         "--kv-cache-dtype", "fp8_e5m2",
-        '--tensor-parallel-size', '2',
+        # '--tensor-parallel-size', '2', # Uncomment this line to enable multi-GPU inference
         "--enforce-eager",
         "--port", "5001"
     ]
