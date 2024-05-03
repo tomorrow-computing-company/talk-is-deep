@@ -4,6 +4,9 @@
 data/arxiv-metadata-oai-snapshot.json
 data/data/
 
+# python
+__pycache__/
+
 # Node business boilerplate
 logs
 *.log

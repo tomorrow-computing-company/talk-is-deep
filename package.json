@@ -10,7 +10,8 @@
     "push": "git add . && npx git-cz && git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)",
     "load-data": "cd data && ./load-from-scratch.sh",
     "run-qdrant": "cd data && ./run-qdrant.sh",
-    "run-inference": "python3 inference/vllm/vllm.py --model-path ../hf-models/Meta-Llama-3-8B-Instruct"
+    "run-inference": "pip install -r inference/requirements.txt && python3 inference/vllm/vllm.py --model-path ../hf-models/Meta-Llama-3-8B-Instruct",
+    "run-data-api": "pip install -r data/requirements.txt && python data/api/server.py"
   },
   "dependencies": {
     "axios": "^1.6.8"
